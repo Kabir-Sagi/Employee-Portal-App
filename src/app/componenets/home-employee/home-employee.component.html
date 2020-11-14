@@ -1,0 +1,56 @@
+<section class="p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="animated slideInLeft">
+          <h1>Employee Portal</h1>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci consectetur consequuntur dolores et exercitationem fuga harum in, laborum, maiores maxime nobis nulla, perferendis quis saepe sequi ullam velit voluptatibus?</p>
+        </div>
+        <a routerLink="/add-employee" class="btn btn-primary animated jackInTheBox delay-1s">Add Employee</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Employee Table -->
+<section class="p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col animated zoomIn delay-2s">
+        <table class="table table-hover text-center table-striped table-secondary">
+          <thead class="bg-secondary text-white">
+            <tr>
+              <th>SNO</th>
+              <th>FIRST NAME</th>
+              <th>LAST NAME</th>
+              <th>EMAIL</th>
+              <th>GENDER</th>
+              <th>IP ADDRESS</th>
+              <th>UPDATE</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr *ngIf="employees.length === 0">
+            <td colspan="8" class="text-danger">No Records Found</td>
+          </tr>
+            <tr *ngFor="let employee of employees;let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{employee.first_name}}</td>
+              <td>{{employee.last_name}}</td>
+              <td>{{employee.email}}</td>
+              <td>{{employee.gender}}</td>
+              <td>{{employee.ip_address}}</td>
+              <td>
+                <a routerLink="/update-employee/{{employee._id}}" class="btn btn-warning btn-sm">update</a>
+              </td>
+              <td>
+                <button class="btn btn-danger btn-sm mt-0" (click)="deleteEmployee(employee._id)">delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

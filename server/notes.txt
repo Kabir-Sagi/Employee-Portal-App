@@ -1,0 +1,102 @@
+Angular Employee Portal
+------------------------
+Frontend URL : http://127.0.0.1:4200
+Backend URL : http://127.0.0.1:3000
+
+1) Read all employees
+---------------------
+HTTP Method : GET
+Path : http://127.0.0.1:3000/api/employees
+Express Method : router.get('/api/employees')
+
+2) Read a Single employee
+---------------------
+HTTP Method : GET
+Path : http://127.0.0.1:3000/api/employees/6
+Express Method : router.get('/api/employees/:id')
+
+3) Create a new employee
+-------------------------
+HTTP Method : POST
+Path : http://127.0.0.1:3000/api/employees
+Express Method : router.post('/api/employees/')
+
+4) UPDATE Existing Employee
+----------------------------
+HTTP Method : PUT
+Path : http://127.0.0.1:3000/api/employees/5
+Express Method : router.put('/api/employees/:id')
+
+5) DELETE Existing Employee
+----------------------------
+HTTP Method : DELETE
+Path : http://127.0.0.1:3000/api/employees/5
+Express Method : router.delete('/api/employees/:id')
+
+Dependent Modules
+------------------
+npm install express --save
+npm install body-parser --save
+npm start
+
+-----------------------------------------------------------------
+Product Portal
+--------------------------------------------------------------
+1) Read all products
+---------------------
+HTTP Method : GET
+Path : http://127.0.0.1:3000/admin/products
+Express Method : router.get('/api/employees')
+
+2) Read a Single product
+---------------------
+HTTP Method : GET
+Path : http://127.0.0.1:3000/admin/products/6
+Express Method : router.get('/admin/products/:id')
+
+3) Create a new product
+-------------------------
+HTTP Method : POST
+Path : http://127.0.0.1:3000/admin/products
+Express Method : router.post('/admin/products')
+
+4) UPDATE Existing Product
+----------------------------
+HTTP Method : PUT
+Path : http://127.0.0.1:3000/admin/products/5
+Express Method : router.put('/admin/products/:id')
+
+5) DELETE Existing Product
+----------------------------
+HTTP Method : DELETE
+Path : http://127.0.0.1:3000/admin/products/5
+Express Method : router.delete('/admin/products/:id')
+
+Dependent Modules
+------------------
+npm install express --save
+npm install body-parser --save
+npm start
+
+
+Run the Application
+----------------------
+npm install
+npm start
+http://127.0.0.1:3000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
